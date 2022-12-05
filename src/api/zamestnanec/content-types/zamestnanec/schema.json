@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zamestnanecs",
+  "info": {
+    "singularName": "zamestnanec",
+    "pluralName": "zamestnanecs",
+    "displayName": "Zamestnanec",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "firstTitles": {
+      "type": "string"
+    },
+    "lastTitles": {
+      "type": "string"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "Vedenie",
+        "Profesor",
+        "Docent",
+        "Odborny asistent",
+        "Vyskumnik",
+        "PhD. Student",
+        "THP Pracovnik"
+      ]
+    },
+    "Avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "predmets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::predmet.predmet"
+    },
+    "room": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "vzdelanies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vzdelanie.vzdelanie"
+    },
+    "projekts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::projekt.projekt"
+    },
+    "publikacias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::publikacia.publikacia"
+    }
+  }
+}

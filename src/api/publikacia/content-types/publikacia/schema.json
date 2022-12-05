@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publikacias",
+  "info": {
+    "singularName": "publikacia",
+    "pluralName": "publikacias",
+    "displayName": "Publikacia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  }
+}
